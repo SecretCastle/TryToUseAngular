@@ -1,0 +1,8 @@
+<div>
+    <div>Top Heros</div>
+    <div class="grid">
+        <div class="hero_item" *ngFor="let item of herso">
+            <a [routerLink]="['/detail', item.id]">{{item.name}}</a>
+        </div>
+    </div>
+</div>
