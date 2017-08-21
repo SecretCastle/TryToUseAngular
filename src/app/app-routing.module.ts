@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes , RouterModule } from '@angular/router'
+import { Routes , RouterModule ,PreloadAllModules } from '@angular/router'
 
 export const routes: Routes = [
     { path: '', redirectTo: 'contact', pathMatch: 'full'},
@@ -9,7 +9,10 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes,{
+        enableTracing: false, // <-- debugging purposes only
+        preloadingStrategy: PreloadAllModules
+    })],
     exports: [RouterModule]
 })
 export class AppRoutingModule {}

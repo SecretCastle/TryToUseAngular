@@ -5,10 +5,11 @@ import { Routes,
 import {HeroComponent} from './hero.component'
 
 const routes: Routes = [
-
-  { path: 'Hero',    component: HeroComponent },
-
-];
+  { 
+    path: '', 
+    component: HeroComponent 
+  }
+]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

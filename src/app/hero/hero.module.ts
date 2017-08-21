@@ -10,9 +10,6 @@ import { HeroRoutingModule } from './hero-routing.module'
   ],
   declarations: [
     HeroComponent
-  ],
-  exports:[
-    HeroComponent
   ]
 })
 export class HeroModule { }
